@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: auto;
+}
+
+.question-area {
+    justify-content: center;
+    align-items: center;
+}
+
+.question-area .divLabel {
+    margin: 0px 10px;
+}
+
+#questionInput {
+    width: 400px;
+}
