@@ -10,9 +10,9 @@
     <link rel="shortcut icon" href="{{ asset('resources/logo.jpg') }}">
     <link rel="favicon" href="{{ asset('resources/logo.jpg') }}">
 
-    <!-- Fonts -->
+    <!-- Fonts>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" -->
 
     <!-- Compiled and minified CSS -->
     <link href="{{ asset('css/bulma.min.css') }}" rel="stylesheet">

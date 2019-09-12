@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'question'], function () {
     Route::post('/', ['uses' => 'QuestionController@newQuestion', 'as' => 'question.newQuestion']);
 });
+
+Route::get('test', ['uses' => 'QuestionController@testInput', 'as' => 'question.testInput']);

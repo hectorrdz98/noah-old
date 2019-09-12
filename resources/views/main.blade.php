@@ -23,6 +23,13 @@
                     </div>
                 </div>
             </div>
+            <div class="field is-horizontal chat-area">
+                <section id="chat-hero" class="hero is-light">
+                    <div class="hero-body">
+                        <div id="chat-container" class="container"></div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </section>
@@ -32,6 +39,13 @@
 $("#questionGo").click(function() {
     var question = $("#questionInput").val();
     if (question != "") {
+        var questionHTML = `
+            <h2 class="subtitle is-question">
+                ` + question + `
+            </h2>
+        `;
+        $("#chat-container").append(questionHTML);
+
         var formData = new FormData();
         formData.append("question", question);
         $.ajax({
@@ -42,11 +56,23 @@ $("#questionGo").click(function() {
             cache: false,
             processData: false,
             success: function (data) {
-                console.log(data);
+                chat(data);
             }
         });
     }
 });
+
+function chat(data) {
+    var answerHTML = `
+        <h2 class="subtitle">
+            ` + data + `
+        </h2>
+    `;
+    $("#chat-container").append(answerHTML);
+    $('#chat-hero').animate({
+        scrollTop: $('#chat-hero')[0].scrollHeight
+    }, 1000);
+}
 
 </script>
 
