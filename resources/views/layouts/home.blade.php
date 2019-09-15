@@ -10,9 +10,11 @@
     <link rel="shortcut icon" href="{{ asset('resources/logo.jpg') }}">
     <link rel="favicon" href="{{ asset('resources/logo.jpg') }}">
 
-    <!-- Fonts>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <!-- Fonts-->
+    <!--link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" -->
+    <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" -->
 
     <!-- Compiled and minified CSS -->
     <link href="{{ asset('css/bulma.min.css') }}" rel="stylesheet">

@@ -49,7 +49,7 @@ $("#questionGo").click(function() {
         var formData = new FormData();
         formData.append("question", question);
         $.ajax({
-            url: "{{ route('question.newQuestion') }}",
+            url: "{{ route('chat.chatReceived') }}",
             type: "POST",
             data: formData,
             contentType: false,

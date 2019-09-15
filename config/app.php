@@ -227,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         
         'QuestionController' => App\Http\Controllers\QuestionController::class,
+        'ConversationController' => App\Http\Controllers\ConversationController::class,
 
     ],
 

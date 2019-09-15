@@ -19,4 +19,10 @@ Route::group(['prefix' => 'question'], function () {
     Route::post('/', ['uses' => 'QuestionController@newQuestion', 'as' => 'question.newQuestion']);
 });
 
+Route::group(['prefix' => 'chat'], function () {
+    Route::post('/', ['uses' => 'ConversationController@chatReceived', 'as' => 'chat.chatReceived']);
+    Route::get('addTokens', ['uses' => 'ConversationController@addTokens', 'as' => 'chat.addTokens']);
+    Route::post('addTokens', ['uses' => 'ConversationController@newToken', 'as' => 'chat.newToken']);
+});
+
 Route::get('test', ['uses' => 'QuestionController@testInput', 'as' => 'question.testInput']);
