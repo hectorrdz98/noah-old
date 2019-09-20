@@ -18,6 +18,9 @@
                             <input id="questionInput" class="input" type="text" placeholder="Ingresa tu pregunta...">
                         </p>
                         <div class="control">
+                            <a id="questionVoice" class="button is-success">Voice!</a>
+                        </div>
+                        <div class="control">
                             <a id="questionGo" class="button is-info">GO!</a>
                         </div>
                     </div>
@@ -35,6 +38,19 @@
 </section>
 
 <script>
+
+$("#questionVoice").click(function () {
+    $(this).removeClass('is-success');
+    $(this).addClass('disabled');
+    var recognition = new webkitSpeechRecognition();
+    recognition.onresult = function(event) { 
+        $("#questionInput").val(event.results[0][0].transcript);
+        $("#questionGo").click();
+        $("#questionVoice").removeClass('disabled');
+        $("#questionVoice").addClass('is-success');
+    }
+    recognition.start();
+});
 
 $("#questionGo").click(function() {
     var question = $("#questionInput").val();
