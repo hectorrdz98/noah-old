@@ -1,0 +1,10 @@
+---
+applications:
+- name: Noah
+  buildpack: php_buildpack
+  memory: 64M
+  random-route: true
+  env:
+    APP_DEBUG: false
+    CF_STAGING_TIMEOUT: 15
+    CF_STARTUP_TIMEOUT: 15
